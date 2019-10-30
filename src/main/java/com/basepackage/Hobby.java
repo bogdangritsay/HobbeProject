@@ -1,10 +1,13 @@
 package com.basepackage;
 
+import com.basepackage.hobbies.HobbyException;
+
 public abstract class Hobby {
     private String name;
     private byte numYear;
     private float avgMoneyMonth;
     private boolean isActive;
+
     //constructors
     public Hobby(String name, byte numYear, float avgMoneyMonth, boolean isActive) {
         this.name = name;
@@ -15,7 +18,7 @@ public abstract class Hobby {
 
     public Hobby() {
         super();
-       this.name = "Unnamed";
+        this.name = "Unnamed";
     }
 
     public Hobby(String name, byte numYear, boolean isActive) {
@@ -59,16 +62,17 @@ public abstract class Hobby {
 
     @Override
     public String toString() {
-        return "Hobby{" +
-                "name='" + name + '\'' +
-                ", numYear=" + numYear +
-                ", avgMoneyMonth=" + avgMoneyMonth +
-                ", isActive=" + isActive +
-                '}';
+        return "Hobby{"
+                + "name='" + name + '\''
+                + ", numYear=" + numYear
+                + ", avgMoneyMonth=" + avgMoneyMonth
+                + ", isActive=" + isActive + '}';
     }
 
-    public abstract String tellAboutHobby();
+
+    public abstract String tellAboutHobby() throws HobbyException;
 
 }
+
 
 
