@@ -9,7 +9,7 @@ public abstract class Hobby {
     private boolean isActive;
 
     //constructors
-    public Hobby(String name, byte numYear, float avgMoneyMonth, boolean isActive) {
+    public Hobby(final String name, final byte numYear, final float avgMoneyMonth, final boolean isActive) {
         this.name = name;
         this.numYear = numYear;
         this.avgMoneyMonth = avgMoneyMonth;
@@ -21,7 +21,7 @@ public abstract class Hobby {
         this.name = "Unnamed";
     }
 
-    public Hobby(String name, byte numYear, boolean isActive) {
+    public Hobby(final String name, final byte numYear, final boolean isActive) {
         this.name = name;
         this.numYear = numYear;
         this.isActive = isActive;
@@ -32,7 +32,7 @@ public abstract class Hobby {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -40,7 +40,7 @@ public abstract class Hobby {
         return numYear;
     }
 
-    public void setNumYear(byte numYear) {
+    public void setNumYear(final byte numYear) {
         this.numYear = numYear;
     }
 
@@ -48,7 +48,7 @@ public abstract class Hobby {
         return avgMoneyMonth;
     }
 
-    public void setAvgMoneyMonth(float avgMoneyMonth) {
+    public void setAvgMoneyMonth(final float avgMoneyMonth) {
         this.avgMoneyMonth = avgMoneyMonth;
     }
 
@@ -56,7 +56,7 @@ public abstract class Hobby {
         return isActive;
     }
 
-    public void setActive(boolean active) {
+    public void setActive(final boolean active) {
         isActive = active;
     }
 

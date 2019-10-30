@@ -5,19 +5,19 @@ public class HobbyException extends Exception {
 
     }
 
-    public HobbyException(String message) {
+    public HobbyException(final String message) {
         super(message);
     }
 
-    public HobbyException(String message, Throwable cause) {
+    public HobbyException(final String message, final Throwable cause) {
         super(message, cause);
     }
 
-    public HobbyException(Throwable cause) {
+    public HobbyException(final Throwable cause) {
         super(cause);
     }
 
-    public HobbyException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public HobbyException(final String message, final Throwable cause, final boolean enableSuppression, final boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
 

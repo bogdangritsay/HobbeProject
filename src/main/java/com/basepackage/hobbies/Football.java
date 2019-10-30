@@ -8,7 +8,7 @@ public class Football extends Hobby {
     public Football() {
         super();
     }
-    public Football(String name, byte numYear, float avgMoneyMonth, boolean isActive, int numGoals, float avgGoals) {
+    public Football(final String name, final byte numYear, final float avgMoneyMonth, final boolean isActive, final int numGoals, final float avgGoals) {
         super(name, numYear, avgMoneyMonth, isActive);
         this.numGoals = numGoals;
         this.avgGoals = avgGoals;
@@ -19,10 +19,10 @@ public class Football extends Hobby {
         try {
             if (getName().equals("Unnamed")) {
                 throw new HobbyException();
-            } else
+            } else {
                 return super.toString() + "\n { Number goals: " + this.numGoals + "\n Average number goals: " + this.avgGoals + "\n }";
-        }
-        catch (HobbyException e) {
+            }
+        } catch (HobbyException e) {
             return "No information about this hobby!";
         }
     }
