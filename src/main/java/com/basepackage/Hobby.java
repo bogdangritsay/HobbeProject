@@ -8,6 +8,8 @@ public abstract class Hobby {
     private float avgMoneyMonth;
     private boolean isActive;
 
+
+
     //constructors
     public Hobby(final String name, final byte numYear, final float avgMoneyMonth, final boolean isActive) {
         this.name = name;
