@@ -1,14 +1,73 @@
 package com.basepackage;
 import org.apache.log4j.Logger;
-import com.basepackage.hobbies.Fishing;
-import com.basepackage.hobbies.Football;
-import com.basepackage.hobbies.HobbyException;
+import com.basepackage.hobbies.*;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class Test {
-    final static Logger logger = Logger.getLogger(Test.class);
-
+    private static int numElements = 100000;
+    public static int getNumElements() {
+        return numElements;
+    }
     public static void main(final String[] args) throws HobbyException {
-        logger.info("Program was been started! successfully!");
+        int numColl = 1;
+        int numSub;
+
+        do {
+            try {
+                Scanner sc = new Scanner(System.in);
+                MainMenu.drawMainMenu();
+                numColl = sc.nextInt();
+                Collections.generateCollection(numColl);
+                if(numColl!=7) {
+                    MainMenu.drawSubMenu();
+                    numSub = sc.nextInt();
+                    Collections.chooseAction(numSub, numColl, numElements);
+                }
+            }
+            catch (InputMismatchException e) {
+                System.out.println("Enter the correct number from 0 to 7 please!!!");
+            }
+        } while (numColl!=0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       /* logger.info("Program was been started! successfully!");
         try {
             System.out.println("Hello! Let`s talk about hobby!\n");
             Hobby firstHobby = new Football("Football",
@@ -32,7 +91,12 @@ public class Test {
             logger.error("There is Exception!!!");
         } finally {
             logger.error("Error! The program did not complete it-s work successfully! ");
-        }
+        }*/
+
+
+
+
+
     }
 }
 
